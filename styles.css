@@ -1796,3 +1796,33 @@ a {
         transform-origin: right bottom
     }
 }
+
+/* Plan de estudios */
+.curriculum { background: #f4f5f8; }
+.curriculum-heading { display: grid; grid-template-columns: 1fr .8fr; gap: 35px; align-items: end; margin-bottom: 38px; }
+.curriculum-heading h2 { font: 800 clamp(32px, 3.5vw, 48px)/1.2 var(--display); letter-spacing: -.05em; margin: 0; }
+.curriculum-heading h2 span { color: #b7832d; }
+.curriculum-heading .section-lead { margin: 0; }
+.curriculum-years { display: grid; gap: 12px; }
+.curriculum-year { background: #fff; border: 1px solid #e4e7ee; border-radius: 5px; overflow: hidden; }
+.curriculum-year summary { display: flex; align-items: center; gap: 18px; padding: 20px 24px; cursor: pointer; list-style: none; }
+.curriculum-year summary::-webkit-details-marker { display: none; }
+.curriculum-year summary::after { content: '+'; margin-left: auto; font-size: 24px; color: #b7832d; font-weight: 400; }
+.curriculum-year[open] summary::after { content: '−'; }
+.year-number { color: #b7832d; font: 800 25px var(--display); }
+.year-title { display: flex; flex-direction: column; gap: 4px; }
+.year-title strong { font: 700 17px var(--display); color: var(--navy); }
+.year-title small { color: #778196; font-size: 11px; }
+.year-count { margin-left: auto; color: #788398; font-size: 10px; white-space: nowrap; }
+.subject-list { margin: 0; padding: 4px 28px 26px 76px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; color: #4f5c73; font-size: 13px; line-height: 1.5; }
+.subject-list li::marker { color: #c08b31; }
+.curriculum-source { margin: 22px 0 0; color: #818b9c; font-size: 10px; line-height: 1.6; }
+@media(max-width:760px) {
+ .curriculum-heading { grid-template-columns: 1fr; gap: 16px; }
+ .curriculum-year summary { padding: 17px 15px; gap: 12px; }
+ .year-number { font-size: 21px; }
+ .year-title strong { font-size: 15px; }
+ .year-title small { font-size: 10px; }
+ .year-count { display: none; }
+ .subject-list { grid-template-columns: 1fr; padding: 0 22px 22px 47px; gap: 9px; font-size: 12px; }
+}
